@@ -10,3 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 })
+
+const { ipcRenderer } = require('electron')
+window.findInPage = function (value) {
+  ipcRenderer.send('find-in-page', value)
+}

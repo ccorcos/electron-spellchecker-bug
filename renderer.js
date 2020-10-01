@@ -4,3 +4,9 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+const input = document.querySelector('input')
+input.addEventListener('input', (e) => {
+  console.log(e.target.value)
+  window.findInPage(e.target.value)
+})
